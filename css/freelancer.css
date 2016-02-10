@@ -16,6 +16,8 @@ pic border: #FAF9EB
 .ppic{
     border: 10px solid #FAF9EB;
     border-radius:4px;
+    -webkit-box-shadow: 5px 5px 5px #D1D1D1;
+    -moz-box-shadow: 5px 5px 5px #D1D1D1;
     box-shadow: 5px 5px 5px #D1D1D1;
     background-color: #FAF9EB;
     z-index: 1;
@@ -76,6 +78,19 @@ ul.nav a:hover {
     background-color: #FFF !important;
     color: #d9593d !important; 
 }
+
+header, #about{
+    -webkit-box-shadow: 0 5px 5px #a6a6a6;
+    -moz-box-shadow: 0 5px 5px #a6a6a6;
+    box-shadow: 0 5px 5px #a6a6a6;
+}
+#portfolio, #contact{
+    -webkit-box-shadow: inset 0 -5px 8px #a8a8a8;
+    -moz-box-shadow: inset 0 -5px 8px #a8a8a8;
+    box-shadow: inset 0 -5px 8px #a8a8a8;
+}
+
+
 
 /*
 .caption-text h3{
