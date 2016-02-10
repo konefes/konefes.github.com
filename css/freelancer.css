@@ -307,6 +307,9 @@ section.success a.active {
     section.first {
         padding-top: 75px;
     }
+    .modal-body p{
+        font-size: 12pt;
+    }
 }
 
 #portfolio .portfolio-item {
