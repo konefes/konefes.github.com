@@ -51,6 +51,7 @@ $(document).mouseup(function (e)
     
     
 //force back button to close modal (if open)
+
 $('div.modal').on('show.bs.modal', function() {
 	var modal = this;
 	var hash = modal.id;
@@ -61,7 +62,7 @@ $('div.modal').on('show.bs.modal', function() {
 		}
 	}
 });
-$('div.modal').on('hide', function() {
+$('div.modal').on('hide.bs.modal', function() {
 	var hash = this.id;
 	history.pushState('', document.title, window.location.pathname);
 });
