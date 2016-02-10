@@ -69,6 +69,14 @@ hr{
     text-align:center;
 } 
 
+ul.nav a:hover { 
+    color: #d9593d !important; 
+}
+.navbar-brand:hover{
+    background-color: #FFF !important;
+    color: #d9593d !important; 
+}
+
 /*
 .caption-text h3{
    position: absolute; 
@@ -241,6 +249,10 @@ header .intro-text .skills {
         -webkit-transition: all .3s;
         -moz-transition: all .3s;
         transition: all .3s;
+        border: 3px solid #FFF;
+    }
+    .navbar-brand-text{
+        margin-top:-7px;
     }
 
     .navbar-fixed-top.navbar-shrink {
@@ -249,6 +261,12 @@ header .intro-text .skills {
 
     .navbar-fixed-top.navbar-shrink .navbar-brand {
         font-size: 1.5em;
+        height:9px;
+        margin-top:7px;
+        border: 2px solid #FFF;
+    }
+    .navbar-fixed-top.navbar-shrink .navbar-brand-text {
+        margin-top:-11px;
     }
 }
 

@@ -16,6 +16,7 @@ $(function() {
 });
 
 // Floating label headings for the contact form
+/*
 $(function() {
     $("body").on("input propertychange", ".floating-label-form-group", function(e) {
         $(this).toggleClass("floating-label-form-group-with-value", !! $(e.target).val());
@@ -24,7 +25,7 @@ $(function() {
     }).on("blur", ".floating-label-form-group", function() {
         $(this).removeClass("floating-label-form-group-with-focus");
     });
-});
+});*/
 
 // Highlight the top nav as scrolling occurs
 $('body').scrollspy({
@@ -47,3 +48,20 @@ $(document).mouseup(function (e)
             container.modal('hide');
         }
     });
+    
+    
+//force back button to close modal (if open)
+$('div.modal').on('show.bs.modal', function() {
+	var modal = this;
+	var hash = modal.id;
+	window.location.hash = hash;
+	window.onhashchange = function() {
+		if (!location.hash){
+			$(modal).modal('hide');
+		}
+	}
+});
+$('div.modal').on('hide', function() {
+	var hash = this.id;
+	history.pushState('', document.title, window.location.pathname);
+});
