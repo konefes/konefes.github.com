@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<!-- saved from url=(0064)http://user.engineering.uiowa.edu/~konefes/swd/cc/Duck_Hunt.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>Chuck Konefes &amp; Jarred Hutchison --- Duck Hunt</title>
+</head>
+
+<body>
+<center>
+
+<h2>Duck Hunt - Chuck Konefes &amp; Jarred Hutchison</h2>
+<hr>
+</center>
+
+<h3>Problem Description</h3>
+<p>
+		Class creates a game window with a splash screen of high scores followed by game options
+ 		 <br>
+ 		(1.) Two games, each 6 rounds long, containing both one and two target modes. 
+ 		<br>
+  		(2.) Game play is controlled by mouse movement and clicking.
+  		<br>
+  		(3.) User interaction with game determines a score that is then compared to server if it is running. 
+  		<br>
+  		(4.) Upon completion the game a splash screen of high scores appears and then reverts back to title screen
+  		<br>
+		
+	</p>
+<hr>
+
+<h3>User Documentation</h3>
+<p>
+The user may open two different programs for the game at any given time. The first is the actual game, DuckHuntMain.java, the other is the server to track high scores, ScoreServerMain.java.
+<br>
+<br>
+
+ScoreServerMain-
+When the user opens up the server, a window will appear and the server is then running. It will periodically display messages dealing with the updating and sending of the scores. The server runs locally so it will track all users that play on that machine and will track the high scores on the machine almost like an old arcade game.  It could also be reconfigured to run remotely.
+<br>
+<br>
+
+DuckHuntMain- 
+When the user opens the game a splash screen is displayed that shows the current high scores.  After clicking, the screen the splash screen disappears and the title screen presents two options: duck or clay mode.
+<br>
+<br>
+	The splash screen and the title screen are both animated and have sound effects. Also, the user will have a unique cursor whenever they enter the duck hunt game window. The cursor will change to crosshairs. Throughout the game, any generated text is a custom font imported and used in the game to allow easier functionality for the displays
+<br>
+<br>
+
+Duck-
+While the user is in duck mode, there will be dynamic display for ammo, ducks hit, ducks missed, rounds, and score. There are also sound effects for actions throughout the duck game. The ducks themselves are animated and have random movement emulation the original game and also spawn randomly behind the grass background. The user will use his/her mouse to shoot the duck with a mouse click and will repeat throughout the 6 rounds of increasing difficulty until the end.  Their score is displayed and then they are sent to the splash screen where, if they scored high enough, their score will be displayed. The rounds include both one and two duck rounds.
+<br>
+<br>
+
+Clay-
+While the user is in clay mode, there will be dynamic display for ammo, clays hit, clays missed, rounds, and score. There are also sounds effects for actions throughout the clay game. The clays themselves are animated (shrinking as they move away from the user), and have random movement to emulate the original game.  They also spawn randomly behind the grass background. The user will use his/her mouse to shoot the clay with a mouse click and will repeat throughout the 6 rounds of increasing difficulty until the end.  Their score is displayed and then they are sent to the splash screen where, if they scored high enough, their score will be displayed. The rounds include both one and two clay rounds.
+<br>
+</p>
+
+<hr>
+
+<h3>Developer Documentation</h3>
+<img src="./Duck_Hunt_files/duckhunt.png">
+<p>
+This game makes use of two programs:  a server that stores high scores in a text file and the main game program.  The server must be up and running before the game client can connect, otherwise the game will start with showing default high scores.
+<br>
+<br>
+
+Graphics:
+	The game program invokes the use of a Graphics2D object to draw all graphics.  A BufferStrategy object is used to take care of buffering everything drawn by the Graphics2D object before being shown on screen.  Every frame the contents that have been drawn into the BufferStrategy are shown.  All images are loading using the Sprite class, which is a wrapper class for an Image.  The SpriteManager caches the images from file into graphics memory, and instances of them can be accessed at any time.  
+<br>
+	The game program operates by flowing between four modes: the score screen, main menu, duck game, and clay game.  An infinite loop in the playGame method enters into the proper mode based on the gameMode variable.  
+<br>
+<br>
+
+Score Screen:
+	The score screen mode creates a ScoreClient local variable, which attempts to connect to the ScoreServer.  If it is found, the scores are sent from the server, the last game’s score is compared and added, and the connection is closed.  The list of scores is drawn on screen, and stays until a MousePressed event is triggered anywhere in the window.  It is run in a loop until the gameMode variable is changed.
+<br>
+<br>
+
+Main Menu:
+	The main menu utilizes MouseMoved events to place a marker next to a menu choice when it is hovered over.  The user can set the gameMode variable for either type of game (duck or clay) by generating a MousePressed event over the corresponding menu item.  A timer based on current system time is used to animate the x-position of the duck in the background.  The menu is run in a loop until the gameMode variable is changed.
+<br>
+<br>
+
+Duck Game:
+	The runDuckGame() method is also run in a loop until the gameMode variable is changed at the end of 6 rounds.  All targets in the game are based on the abstract Target class.  Class Duck extends this, and 2 Duck objects are created right away.  A state variable tracks the required behavior of the loop, with these states: at 0, the game is either starting or showing the card between rounds.  This is drawn to the screen for a certain amount of time based on round, then state 1 is entered.  State 1 starts one or both Duck objects.  This resets the Ducks, giving them a random x position and y position under the grass of the foreground.  State 2 is then entered and makes up the actual gameplay.  Each frame the ducks are moved according to their speed variable and the time passed since last frame.  Upon hitting the edge of the screen, they change direction. 
+<br>
+	Upon shooting, state 3 is quickly entered, drawing and showing a red screen.  This immediately flows into state 4, which calls a quick Thread.sleep() to keep the red on screen for a moment.  Shooting also decreases the shotsLeft variable, and utilizes a mouse pressed event to check if a duck was hit.  The game keeps going until the round time is up and the ducks leave, all shots are depleted and the ducks leave, or the ducks are all hit.  The score is updated whenever a duck is marked as hit by the mouse pressed event.
+<br>
+<br>
+
+Clay Game:
+	The runClayGame() method operates very similarly to the runDuckGame() method.  Both are based on 6 rounds and have the same basic functions and operability.  The ClayPigeon class also animates based on the moveIt() method derived from the Target class, but is changed to form an arc across the screen.  The clay pigeons are 	also dynamically resized based on time.
+<br>
+	Resizing a Sprite object requires the Sprite member of each ClayPigeon to be reset each round.  This is accomplished by reverting the Sprite back to its original Image object.
+<br>
+<br>
+
+Server/Client:
+	To operate correctly, the server must be started before the game client.  Upon starting, it creates a ServerSocket to wait for a client connection.  They connect through a Socket, and the server waits for a command, either to send the contents of a score text file to the client, or to write new high scores to the same file.  The server reads from file with a Scanner object, or writes with a BufferedWriter.  The order of commands from the client are to request the scores, then write back scores with a possible new entry from the last game played.  The connection is then terminated since the client object is a local variable.  The server can remain open after termination and continue to accept other connections.
+<br>
+</p>
+<hr>
+
+
+</body></html>
