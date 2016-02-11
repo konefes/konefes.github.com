@@ -277,7 +277,7 @@
                         </div>
                     </a>
                 </div>
-    <!-- ---------------------------------------------------------------------------------------------------------------------- -->
+    <!-- ---------------------------------------------------------------------------------------------------------------------- 
                 <div class="col-sm-4 portfolio-item">
                     <a href="#portfolioModal12" class="portfolio-link ppic" data-toggle="modal">
                         <div class="caption">
@@ -292,9 +292,8 @@
                             <div class="caption-info">Smaller Java projects for Software Design class</div>
                         </div>
                     </a>
-                </div>
+                </div>-->
     <!-- ---------------------------------------------------------------------------------------------------------------------- -->
-                <!--
                 <div class="col-sm-4 portfolio-item">
                     <a href="#portfolioModal13" class="portfolio-link ppic" data-toggle="modal">
                         <div class="caption">
@@ -302,11 +301,11 @@
                                 <i class="fa fa-search-plus fa-3x"></i>
                             </div>
                         </div>
-                        <img src="pitems/sisc/sisc_thumb_sm.jpg" class="img-responsive" alt="">
+                        <img src="pitems/picade/arcade_controls_thumb.jpg" class="img-responsive" alt="">
                         <div class="caption-text">
                             <div class="caption-title">Picade</div>
                             <hr>
-                            <div class="caption-info">Planned project to build arcade emulator</div>
+                            <div class="caption-info">Planned project to build arcade emulation system</div>
                         </div>
                     </a>
                 </div>
@@ -707,11 +706,13 @@
                             <hr class="star-primary">
                             <img src="pitems/healtherecords/healtherecords_thumb.jpg" class="img-responsive img-centered" alt="">
                             <p><i>Description:</i></p>
-                            <p>&emsp;&emsp;</p>
+                            <p>&emsp;&emsp;Developed with PHP using CodeIgniter, this web app provides doctor, patient, nurse, and admin profiles along with associated functionality.  The app streamlines a hospital’s records and eliminates the need for physical paperwork.</p>
                             <p><i>Details:</i></p>
-                            <p>&emsp;&emsp;</p>
-                            <p>&emsp;&emsp;</p>
-                            <p>&emsp;&emsp;</p>
+                            <p>&emsp;&emsp;From the patient homepage, links provide easy access to functionality that includes Schedule an Appointment, Show My Appointments, Fill Out Medical Record, Pay Bill, and View Medical Record. These home page links allow a user to fill out their own medical record forms, view the current status of their medical records, search and register for appointments with a Doctor, and view/change/cancel their upcoming appointments. A patient receives an email notification if a Doctor changes the time or cancels a scheduled appointment with the patient. Once a doctor has determined the user’s treatment as “complete,” and an admin has generated a bill, the user can pay their bill by verifying the total amount by typing it in and clicking submit on the bill form view.</p>
+                            <img src="pitems/healtherecords/healtherecords_invoice.png" class="img-responsive img-centered" alt="">
+                            <p>&emsp;&emsp;The doctor homepage provides access to Show My Patients, My Info, Salary Info. A doctor is able to view a list of their patients with future appointments, which will link to the medical records/demographic information of the patients.  A doctor also has a link to fill out forms for Prescriptions and Diagnosis for the given patient at the time of the appointment. A doctor receives an email if one of their patients changes or cancels an appointment with them, and a doctor may begin the bill generation and payment process by clicking “treatment complete” button for the specific patient.  Additionally, a doctor has functionality to display their yearly salary information. This salary is dependent on the number of patients which he sees over the pay period.</p>
+                            <img src="pitems/healtherecords/healtherecords_salary.png" class="img-responsive img-centered" alt="">
+                            <p>&emsp;&emsp;The nurse homepage is a customized version similar to a doctor’s page, and both are able to choose their work schedule and update as needed.  Admin profiles have the ability to evaluate all other actor types, approve treatments, and approve and distribute payroll.</p>
                             <ul class="list-inline item-details">
                                 <li>Date: Spring 2015</li>
                                 <br><li><a target="_blank" href="https://docs.google.com/document/d/1th4fKeOZ9HgcWxXibiFAvHuPWruH-LXpACzGbWCkHyc/edit?usp=sharing">Software Requirements Specs</a> on Google Docs</li>
@@ -742,12 +743,13 @@
                             <h2>Duck Hunt</h2>
                             <div class="subtitle"><p><i>Classic game clone created with Java</i></p></div>
                             <hr class="star-primary">
-                            <img src="pitems/duck_hunt/duckhunt2.png" class="img-responsive img-centered" alt="">
+                            <img src="pitems/duck_hunt/duckhunt_thumb.jpg" class="img-responsive img-centered" alt="">
                             <p><i>Description:</i></p>
                             <p>&emsp;&emsp;A game based on the NES classic Duck Hunt, featuring two modes: duck and clay pigeon.</p>
                             <p><i>Details:</i></p>
-                            <p>&emsp;&emsp;</p>
-                            <p>&emsp;&emsp;</p>
+                            <p>&emsp;&emsp;The goal of this project was to implement a classic arcade game in Java with modern twists.  With Duck Hunt, the similarity between the two game types allowed utilizing polymorphism to implement the functionality.  General actors were created with all the shared functionality, and each specific type of sprite inherited behaviors through multiple levels of the object hierarchy.  Ducks were given random behavior, while the clay pigeons followed a familiar arc.</p>
+                            <img src="pitems/duck_hunt/duckhunt2.png" class="img-responsive img-centered" alt="">
+                            <p>&emsp;&emsp;Each game gave the player three shots per round, gradually increased the difficulty through each round, and tabulated the scores at the end.  High scores stored on a server were compared and updated as needed.</p>
                             <p>&emsp;&emsp;</p>
                             <ul class="list-inline item-details">
                                 <li>Date: Fall 2015</li>
@@ -777,12 +779,14 @@
                             <h2>Simulated CPU</h2>
                             <div class="subtitle"><p><i>Hardware processor simulated with VHDL</i></p></div>
                             <hr class="star-primary">
-                            <img src="pitems/sisc/proc1_700x430.png" class="img-responsive img-centered" alt="">
+                            <img src="pitems/sisc/cpu2.jpg" class="img-responsive img-centered" alt="">
                             <p><i>Description:</i></p>
                             <p>&emsp;&emsp;This project consisted of building, testing, and modifying a Simple Instruction Set Computer (SISC) processor using Verilog HDL and ModelSim. Included was experience with writing machine code programs that correctly execute on this computer.</p>
                             <p><i>Details:</i></p>
-                            <p>&emsp;&emsp;</p>
-                            <p>&emsp;&emsp;</p>
+                            <img src="pitems/sisc/proc1_700x430.png" class="img-responsive img-centered" alt="">
+                            <p>&emsp;&emsp;By utilizing a few provided components, a fully working CPU was developed by creating and coding modules for the control unit, program counter control, instruction memory, branch execution.  This allowed for basic arithmetic and branch instructions to be executed.</p>
+                            <img src="pitems/sisc/instruction_set.jpg" class="img-responsive img-centered" alt="">
+                            <p>&emsp;&emsp;The datapath was completed by adding the data memory and modifying the control unit to support load and store instructions.  Additionally, the datapath was modified to support the SWAP instruction.  Machine-language programs were written to implement bubble sort and multiplication functionality.</p>
                             <p>&emsp;&emsp;</p>
                             <ul class="list-inline item-details">
                                 <li>Date: Spring 2015</li>
@@ -813,13 +817,15 @@
                             <h2>Backup Sensor</h2>
                             <div class="subtitle"><p><i>Sonar distance finder for vehicle assistance</i></p></div>
                             <hr class="star-primary">
-                            <img src="img/portfolio/submarine.png" class="img-responsive img-centered" alt="">
+                            <img src="pitems/backup_sensor/sonar.jpg" class="img-responsive img-centered" alt="">
                             <p><i>Description:</i></p>
-                            <p>&emsp;&emsp;</p>
+                            <p>&emsp;&emsp;This project was my first experience designing an embedded system, and it utilizes an ATMega chip programmed with AVR Assembler using C.</p>
                             <p><i>Details:</i></p>
-                            <p>&emsp;&emsp;</p>
-                            <p>&emsp;&emsp;</p>
-                            <p>&emsp;&emsp;</p>
+                            <p>&emsp;&emsp;This project utilizes a SainSmart HC-SR04 Ranging Detector controlled by an ATMega microcontroller to create a backup sensor for an automobile.  An LCD with custom characters is implemented to display the distance and visualization, and a piezo buzzer is also utilized as an auditory alert.  The system is designed as a functional implementation for older model vehicles to obtain the sonar-sensing capabilities, so an on-board integrated power converter is included to take 12v DC from the automobile’s reverse light to turn on and supply voltage.</p>
+                            <img src="pitems/backup_sensor/schematic.jpg" class="img-responsive img-centered" alt="">
+                            <p>&emsp;&emsp;The HC-SR04 operates by sending out 40kHz pulses and sending an echo back to the ATmega88PA.  A timer is utilized to interpret the signal from the range finder, and the information is presented to the user through a visual and auditory alert.</p>
+                            <img src="pitems/backup_sensor/backup_thumb.jpg" class="img-responsive img-centered" alt="">
+                            <p>&emsp;&emsp;Version 2 of this project implemented multiple range detectors through the use of shift registers, along with an LED array to visualize both distance and direction of obstacles.  This version supplied almost 360 degrees of measurements.</p>
                             <ul class="list-inline item-details">
                                 <li>Date: Spring 2014</li>
                                 <br><li><a target="_blank" href="https://github.com/konefes/backup_sensor">Source Code</a> on GitHub</li>
@@ -918,11 +924,13 @@
                             <h2>Planned Project - Picade</h2>
                             <div class="subtitle"><p><i>Arcade and classic game emulator</i></p></div>
                             <hr class="star-primary">
-                            <img src="img/portfolio/submarine.png" class="img-responsive img-centered" alt="">
+                            <img src="pitems/picade/arcade_controls.jpg" class="img-responsive img-centered" alt="">
                             <p><i>Description:</i></p>
-                            <p>&emsp;&emsp;</p>
+                            <p>&emsp;&emsp;A handmade arcade cabinet powered by a customized version of the RetroPie emulator package.</p>
                             <p><i>Details:</i></p>
                             <p>&emsp;&emsp;</p>
+                            <img src="pitems/picade/picade.jpg" class="img-responsive img-centered" alt="">
+                            <div class="subtitle"><p><i>A similar project</i></p></div>
                             <p>&emsp;&emsp;</p>
                             <p>&emsp;&emsp;</p>
                             <ul class="list-inline item-details">
