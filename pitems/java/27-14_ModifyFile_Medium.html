@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<!-- saved from url=(0081)http://user.engineering.uiowa.edu/~konefes/swd/Exam2/27-14_ModifyFile_Medium.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>Chuck Konefes --- 27-14_ModifyFile_Medium</title>
+</head>
+
+<body>
+<center>
+
+<h2>27-14_ModifyFile_Medium</h2>
+<hr>
+</center>
+
+<h3>Problem Description</h3>
+<p>
+This problem involves both a server-side program that handles requests, and a client-side program to request, edit, and save text files.
+</p>
+<hr>
+
+<h3>User Documentation</h3>
+<p>
+If the server-side program is running, the client can be started and used to request a file.  If it exists, the file will be shown in the main text area and can be edited and saved back to the server.  Additionally, text files can be written directly in the main text area and saved as a specified file name.
+</p>
+<hr>
+
+<h3>Developer Documentation</h3>
+<img src="./27-14_ModifyFile_Medium_files/27-14_ModifyFile_Medium.png">
+<p>
+Text files alice.txt, alice2.txt, and chuck.txt are provided for testing purposes.
+</p>
+<p>
+The server program creates a ServerSocket object to provide a potential connection for a client to connect to.  A Socket object is also created and waits for a connection from a client.
+</p>
+<p>
+Upon starting, the client program connects to the server and all input and output streams are initialized.  The server waits for a command from the client, which can either be a request for a file or a command to save a file.
+</p>
+<p>
+When given a request for a file, the server creates a File object with the filename provided by the client.  It determines if the file exists, and sends either an error message or the full text of the file to the client.  The client writes this to its main text area.  When asked to save, the server creates a BufferedWriter object along with a File object using the filename from the client, and writes the input from the client to the file.
+</p>
+<p>
+After the connection to the client is terminated, the server waits for another connection.
+</p>
+<p>
+When initialized, the client program either connects to the server, or determines there is no server running and closes.  When the user specifies a file and presses the open button (or presses enter in the file field), a command to read a file is sent to the client, followed by the file name.  The resulting message from the server is read and displayed in the main text area.  
+</p>
+<p>
+When the save button is pressed and a file name is written in the text field, a save command is sent to the server, followed by the file name.  Everything in the main text area is then sent to the server to be written to file.
+</p>
+<hr>
+
+
+<h3>Source Code</h3>
+<a href="ModifyFileClient.java"> ModifyFileClient.java</a><br>
+<a href="ModifyFileClientTest.java"> ModifyFileClientTest.java</a><br>
+<a href="ModifyFileServer.java"> ModifyFileServer.java</a><br>
+<a href="ModifyFileServerTest.java"> ModifyFileServerTest.java</a><br>
+<hr>
+
+</body></html>

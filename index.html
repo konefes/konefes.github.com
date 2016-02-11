@@ -277,7 +277,7 @@
                         </div>
                     </a>
                 </div>
-    <!-- ---------------------------------------------------------------------------------------------------------------------- 
+    <!-- ---------------------------------------------------------------------------------------------------------------------- -->
                 <div class="col-sm-4 portfolio-item">
                     <a href="#portfolioModal12" class="portfolio-link ppic" data-toggle="modal">
                         <div class="caption">
@@ -292,8 +292,8 @@
                             <div class="caption-info">Smaller Java projects for Software Design class</div>
                         </div>
                     </a>
-                </div>-->
-    <!-- ---------------------------------------------------------------------------------------------------------------------- -->
+                </div>
+    <!-- ---------------------------------------------------------------------------------------------------------------------- 
                 <div class="col-sm-4 portfolio-item">
                     <a href="#portfolioModal13" class="portfolio-link ppic" data-toggle="modal">
                         <div class="caption">
@@ -308,7 +308,7 @@
                             <div class="caption-info">Planned project to build arcade emulation system</div>
                         </div>
                     </a>
-                </div>
+                </div>-->
     <!-- ---------------------------------------------------------------------------------------------------------------------- -->
                 <!--
                 <div class="col-sm-4 portfolio-item">
@@ -344,10 +344,10 @@
             </div>
             <div class="row">
                 <div class="col-lg-4 col-lg-offset-2">
-                    <p>I am a Computer Engineering student currently in my last semester at the University of Iowa.</p>
+                    <p>I am a Computer Engineering student currently in my last semester at the University of Iowa, with a focus on software and embedded systems.</p>
                 </div>
                 <div class="col-lg-4">
-                    <p>As a non-traditional student returning to change careers, I have previous experience with large, team-based projects due to my old work as a motion graphics / 3d animator.</p>
+                    <p>As a non-traditional student returning to college to change careers, I have experience with team-based projects due to my previous work as a motion graphics / 3d animator.</p>
                 </div>
                 <div class="col-lg-8 col-lg-offset-2 text-center">
                     <a href="pitems/Chuck_Konefes_Resume.pdf" target="_blank" class="btn btn-lg btn-outline">
@@ -854,16 +854,16 @@
                             <h2>Calculator Server</h2>
                             <div class="subtitle"><p><i>Multi-client server with calculator functions</i></p></div>
                             <hr class="star-primary">
-                            <img src="img/portfolio/submarine.png" class="img-responsive img-centered" alt="">
+                            <img src="pitems/calc_server/server_thumb.jpg" class="img-responsive img-centered" alt="">
                             <p><i>Description:</i></p>
                             <p>&emsp;&emsp;The goal of this assignment was to build a calculator service to which multiple clients can connect to perform simple computations.</p>
                             <p><i>Details:</i></p>
-                            <p>&emsp;&emsp;</p>
-                            <p>&emsp;&emsp;</p>
+                            <p>&emsp;&emsp;The server is responsible for maintaining a table for each client connections, and each table provides a mapping from variables names and their values.  Each new client is stored in a linked list of clients, and each client in that list has its own linked list of variables to keep their information separate from one another. Upon connecting to a new client, the server waits for input.  It keeps track of each client's information, and frees up the client memory when a disconnect is detected.  The server reads input from the client until it encounters a newline character, and then performs the corresponding actions.</p>
+                            <p>&emsp;&emsp;The Linux operating system provides the select function, which was used for managing connections with multiple clients.  It allows the program to monitor multiple sockets for certain activity to occur. For example, if there is some data to be read on one of the sockets, select will provide that information.</p>
                             <p>&emsp;&emsp;</p>
                             <ul class="list-inline item-details">
                                 <li>Date: Fall 2015</li>
-                                <br><li><a target="_blank" href="">Project Proposal</a> on Google Docs</li>
+                                <br><li><a target="_blank" href="https://github.com/konefes/OS_hw5">Source Code</a> on GitHub</li>
                                 <br><li>Tools: C, Linux</li>
                             </ul>
                             <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
@@ -891,14 +891,27 @@
                             <hr class="star-primary">
                             <img src="" class="img-responsive img-centered" alt="">
                             <p><i>Description:</i></p>
-                            <p>&emsp;&emsp;</p>
+                            <p>&emsp;&emsp;Miscellanious toy projects</p>
                             <p><i>Details:</i></p>
-                            <p>&emsp;&emsp;</p>
-                            <p>&emsp;&emsp;</p>
-                            <p>&emsp;&emsp;</p>
+                            <p>&emsp;&emsp;Selected projects from the class are detailed in the links below:</p>
+                            <div class="subtitle">
+                                <p><a target="_blank" href="pitems/java/26-10_BouncingBallsShadows_Hard.html">Bouncing Balls</a></p>
+                                <img src="pitems/java/balls.jpg" class="img-responsive img-centered" alt="">
+                                <p><a target="_blank" href="pitems/java/27-14_ModifyFile_Medium.html">Network File Modification</a></p>
+                                <img src="pitems/java/file.jpg" class="img-responsive img-centered" alt="">
+                                <p><a target="_blank" href="pitems/java/S15_ArabicToRomanGUI_Hard.html">Arabic to Roman Converter</a></p>
+                                <p><a target="_blank" href="pitems/java/14.9Calculator.html">Calculator</a></p>
+                                <p><a target="_blank" href="pitems/java/22-14_PostfixEval_Hard.html">Postfix Evaluator</a></p>
+                                <p><a target="_blank" href="pitems/java/16-22_MorseCode_Medium.html">Morse Code Converter</a></p>
+                                <img src="pitems/java/morse.jpg" class="img-responsive img-centered" alt="">
+                                <p><a target="_blank" href="pitems/java/25-13_ColorChooser_Hard.html">Color Chooser</a></p>
+                                <p><a target="_blank" href="pitems/java/19-10_Quicksort_Medium.html">Quicksorter</a></p>
+                                <img src="pitems/java/quicksort.jpg" class="img-responsive img-centered" alt="">
+                                <p><a target="_blank" href="pitems/java/8-16_HugeInt_Medium.html">Huge Integer</a></p>
+                                <p><a target="_blank" href="pitems/java/8.13SetOfIntegers.html">Set of Integers</a></p>
+                            </div>
                             <ul class="list-inline item-details">
                                 <li>Date: Fall 2014</li>
-                                <br><li><a target="_blank" href="">Project Proposal</a> on Google Docs</li>
                                 <br><li>Tools: Java, SVN</li>
                             </ul>
                             <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
@@ -908,7 +921,7 @@
             </div>
         </div>
     </div>
-    <!-- ---------------------------------------------------------------------------------------------------------------------- -->
+    <!-- ---------------------------------------------------------------------------------------------------------------------- 
     <div class="portfolio-modal modal fade" id="portfolioModal13" tabindex="-1" role="dialog" aria-hidden="true">
         <div class="modal-content">
             <div class="close-modal" data-dismiss="modal">
@@ -928,7 +941,7 @@
                             <p><i>Description:</i></p>
                             <p>&emsp;&emsp;A handmade arcade cabinet powered by a customized version of the RetroPie emulator package.</p>
                             <p><i>Details:</i></p>
-                            <p>&emsp;&emsp;</p>
+                            <p>&emsp;&emsp;Will be designed with a customized version of the RetroPie emulator for Raspberry Pi.  The button layout is designed to fit with NES, SNES, and Genesis control configurations, and connected to a usb interface for communication.  The GPIO pins on the Pi are used to generate light patterns through the buttons (for start-up sequence, etc.)</p>
                             <img src="pitems/picade/picade.jpg" class="img-responsive img-centered" alt="">
                             <div class="subtitle"><p><i>A similar project</i></p></div>
                             <p>&emsp;&emsp;</p>
@@ -944,8 +957,8 @@
                 </div>
             </div>
         </div>
-    </div>
-    <!-- ---------------------------------------------------------------------------------------------------------------------- -->
+    </div>-->
+    <!-- ---------------------------------------------------------------------------------------------------------------------- 
     <div class="portfolio-modal modal fade" id="portfolioModal14" tabindex="-1" role="dialog" aria-hidden="true">
         <div class="modal-content">
             <div class="close-modal" data-dismiss="modal">
@@ -979,7 +992,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div>-->
 
     <!-- ---------------------------------------------------------------------------------------------------------------------- -->
     <!-- ---------------------------------------------------------------------------------------------------------------------- -->

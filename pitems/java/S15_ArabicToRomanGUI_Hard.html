@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<!-- saved from url=(0083)http://user.engineering.uiowa.edu/~konefes/swd/Exam2/S15_ArabicToRomanGUI_Hard.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>Chuck Konefes --- S15_ArabicToRomanGUI_Hard</title>
+</head>
+
+<body>
+<center>
+
+<h2>S15_ArabicToRomanGUI_Hard</h2>
+<hr>
+</center>
+
+<h3>Problem Description</h3>
+<p>
+This program handles the conversion of Arabic numbers to the equivalent Roman numeral and back.
+</p>
+<hr>
+
+<h3>User Documentation</h3>
+<p>
+The user is prompted to enter either an Arabic number or a Roman numeral in the appropriate field. The corresponding equivalent is updated in real-time.
+</p>
+<hr>
+
+<h3>Developer Documentation</h3>
+<img src="./S15_ArabicToRomanGUI_Hard_files/S15_ArabicToRomanGUI_Hard.png">
+<p>
+The code consists of the ArabicToRoman class that extends JFrame.  Two JTextField objects are created for the input, and the inner class KeyHandler listens for keyboard events.
+</p>
+<p>
+As the user enters a number in either field, the key release is heard by the KeyHandler object and a method is called to update the other text field to the equivalent amount entered.
+</p>
+<p>
+Roman numeral strings are read from left to right to convert to Arabic.  After conversion, the Arabic number is converted right back as a way to ensure correct formatting of the Roman numeral string.
+</p>
+<p>
+Arabic numbers are assessed by the largest equivalent of Roman numeral/s, which is then subtracted from the amount and the numeral is appended to the Roman numeral string.  This is repeated until 0 and the result is written to the JTextField.
+</p>
+<hr>
+
+
+<h3>Source Code</h3>
+<a href="ArabicToRoman.java"> ArabicToRoman.java</a><br>
+<a href="ArabicToRomanTest.java"> ArabicToRomanTest.java</a><br>
+
+<hr>
+
+</body></html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<!-- saved from url=(0080)http://user.engineering.uiowa.edu/~konefes/swd/Exam2/19-10_Quicksort_Medium.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>Chuck Konefes --- 19-10_Quicksort_Medium</title>
+</head>
+
+<body>
+<center>
+
+<h2>19-10_Quicksort_Medium</h2>
+<hr>
+</center>
+
+<h3>Problem Description</h3>
+<p>
+This program creates window with options for the user to add integers to an array.  The integer array can be sorted at any time using the Quicksort algorithm.
+</p>
+<hr>
+
+<h3>User Documentation</h3>
+<p>
+Integers can be entered in the text field at the top, and are shown in the main text area.  The user can enter as many integers to the array as needed.  The Quicksort button sorts the array and the clear button resets the array to 0 elements.
+</p>
+<hr>
+
+<h3>Developer Documentation</h3>
+<img src="./19-10_Quicksort_Medium_files/19-10_Quicksort_Medium.png">
+<p>
+The code consists of the QuickSortGui class that extends JFrame to create a user interface.  QuickSortGui also implements ActionListener to provide event handling capabilities for the "Add Integer to Array", "QuickSort", and "Clear Array" buttons.  Integers can be added from the top text field, and the Current Array field is updated whenever a new integer is added to the array.  The Sorted Array field is updated upon sorting.
+</p>
+<p>
+The Quicksort algorithm works using a partitioning step that takes the first element of the unsorted array and determines its final location in the sorted array (everything to the left is smaller, everything to the right is larger).  The subarrays of smaller and larger elements are sorted recursively using the same method.  When a subarray is down to one element, that element is in its final location.
+</p>
+<p>
+
+</p>
+<p>
+
+</p>
+<hr>
+
+
+<h3>Source Code</h3>
+<a href="QuickSort.java"> QuickSort.java</a><br>
+<a href="QuickSortGui.java"> QuickSortGui.java</a><br>
+<a href="QuickSortTest.java"> QuickSortTest.java</a><br>
+<hr>
+
+</body></html>

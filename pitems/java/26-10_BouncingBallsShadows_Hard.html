@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<!-- saved from url=(0089)http://user.engineering.uiowa.edu/~konefes/swd/Exam2/26-10_BouncingBallsShadows_Hard.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>Chuck Konefes --- 26-10_BouncingBallsShadows_Hard</title>
+</head>
+
+<body>
+<center>
+
+<h2>26-10_BouncingBallsShadows_Hard</h2>
+<hr>
+</center>
+
+<h3>Problem Description</h3>
+<p>
+This program creates multithreaded ball objects that continually update their location and are drawn to the screen.
+</p>
+<hr>
+
+<h3>User Documentation</h3>
+<p>
+The user can click anywhere on the window to create a new, randomly colored and sized ball that bounces around at a random speed.  A maximum of 20 balls are allowed and can be cleared at any time by pressing the "Clear" button
+</p>
+<hr>
+
+<h3>Developer Documentation</h3>
+<img src="./26-10_BouncingBallsShadows_Hard_files/26-10_BouncingBallsShadow_Hard.png">
+<p>
+The code consists of the BouncingBalls class that extends JFrame. An object of type BallPanel is created which all balls and shadows will be drawn on.  An ArrayList of Ball objects is initialized with 0 objects as well.
+</p>
+<p>
+The BouncingBalls class provides two anonymous inner classes to listen for mouse presses and events from the clear button.  When the mouse is clicked on the BallPanel, a new Ball object is added to the ArrayList.
+</p>
+<p>
+All objects of the inner class Ball are multithreaded by implementing Runnable and controlled by an ExecutorService.  Their run() method consists of updating their location an diameter variables.  The thread then sleeps for 42ms, so they are updated about 24 times per second.  The Repainter class acts as a timer, and calls repaint() on the BallPanel every 42 ms.
+</p>
+<p>
+When created by a click, the balls have random color, size, and speed.  They bounce on the x and y coordinate planes by checking their location against the panel size, then reversing direction.  The diameter of the balls are also manipulated to attain movement in the z-direction.
+</p>
+<hr>
+
+
+<h3>Source Code</h3>
+<a href="BouncingBalls.java"> BouncingBalls.java</a><br>
+<a href="BouncingBallsTest.java"> BouncingBallsTest.java</a><br>
+<hr>
+
+</body></html>

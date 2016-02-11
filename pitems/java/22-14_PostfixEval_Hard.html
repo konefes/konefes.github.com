@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<!-- saved from url=(0080)http://user.engineering.uiowa.edu/~konefes/swd/Exam2/22-14_PostfixEval_Hard.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>Chuck Konefes --- 22-14_PostfixEval_Hard</title>
+</head>
+
+<body>
+<center>
+
+<h2>22-14_PostfixEval_Hard</h2>
+<hr>
+</center>
+
+<h3>Problem Description</h3>
+<p>
+This program takes in a String in postfix notation, and provides functionality to evaluate it.
+</p>
+<hr>
+
+<h3>User Documentation</h3>
+<p>
+The user can add to the postfix string by entering an integer or operator in the text field and pressing enter or pressing the "Add to Postfix String" button.  The current postfix string will is shown in the "Current String" box.  The string can be evaluated by pressing the Evaluate button or cleared with the Clear button.
+</p>
+<hr>
+
+<h3>Developer Documentation</h3>
+<img src="./22-14_PostfixEval_Hard_files/22-14_PostfixEvaluator_Hard.png">
+<p>
+A valid postfix string is assumed.
+</p>
+<p>
+The PostfixEvaluatorGUI class creates the window and implements an ActionListener that is configured to listen for events from the Add to String, Evaluate, and Clear buttons as well as events from the top text field.  The class also initializes a PostfixEvaluator object to store the postfix StringBuffer object and perform the evaluation.
+</p>
+<p>
+The PostfixEvaluator performs the postfix evaluation by reading the StringBuffer from left to right.  It pushes numbers to an integer stack, and when an operator is encountered, the top two values are popped from the stack and evaluated using that operator.  The result is pushed back on the stack, and this continues until the end of the string is reached.  The final value popped from the stack is the final result to be displayed in the Evaluation field.
+</p>
+<p>
+The string is traversed character by character using spaces to separate both integers and operators from each other.
+</p>
+<hr>
+
+
+<h3>Source Code</h3>
+<a href="PostfixEvaluator.java"> PostfixEvaluator.java</a><br>
+<a href="PostfixEvaluatorGUI.java"> PostfixEvaluatorGUI.java</a><br>
+<a href="PostfixEvaluatorTest.java"> TPostfixEvaluatorTest.java</a><br>
+<hr>
+
+</body></html>

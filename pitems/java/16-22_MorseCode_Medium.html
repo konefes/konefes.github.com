@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<!-- saved from url=(0080)http://user.engineering.uiowa.edu/~konefes/swd/Exam2/16-22_MorseCode_Medium.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>Chuck Konefes --- 16-22_MorseCode_Medium</title>
+</head>
+
+<body>
+<center>
+
+<h2>16-22_MorseCode_Medium</h2>
+<hr>
+</center>
+
+<h3>Problem Description</h3>
+<p>
+This program creates a window that provides the functionality to convert plain text into Morse code.  Additionally, Morse code can be converted into plain text.
+</p>
+<hr>
+
+<h3>User Documentation</h3>
+<p>
+The user can enter plain text in the left text field to be converted to Morse code, or Morse code in the right text field to be converted to plain text.
+</p>
+
+<hr>
+
+<h3>Developer Documentation</h3>
+<img src="./16-22_MorseCode_Medium_files/16-22_MorseCode_Medium.png">
+<p>
+The code consists of the MorseCodeWindow class that extends JFrame to create the user interface, and an inner class ButtonHandler that handles events from button presses to convert one way or the other.
+</p>
+<p>
+Upon pressing "Text to Morse", the string from the text area is split by spaces to form words.  The words are looped through letter by letter, and the Morse equivalent of each character is stored in a string followed by a space.  At the end of a word, three spaces are inserted.  This continues until the entire message is encoded.
+</p>
+<p>
+Upon pressing "Morse to Text", the string from the Morse area is split by sequences of 3 spaces to form words.  The words are looped through, and each Morse representation of a character is separated by a single space.  The text equivalent of each Morse sequence is stored in a string.  At the end of a word, a space is inserted.  This continues until the entire message is decoded.
+</p>
+<p>
+Two arrays store corresponding entries for the text characters and their equivalent Morse string to allow for easy encoding/decoding.
+</p>
+<hr>
+
+
+<h3>Source Code</h3>
+<a href="MorseCodeTest.java"> MorseCodeTest.java</a><br>
+<a href="MorseCodeWindow.java"> MorseCodeWindow.java</a><br>
+<hr>
+
+</body></html>

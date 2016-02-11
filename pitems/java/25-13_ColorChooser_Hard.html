@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<!-- saved from url=(0078)http://user.engineering.uiowa.edu/~konefes/swd/ec/25-13_ColorChooser_Hard.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>Chuck Konefes --- 25-13_ColorChooser_Hard</title>
+</head>
+
+<body>
+<center>
+
+<h2>25-13_ColorChooser_Hard</h2>
+<hr>
+</center>
+
+<h3>Problem Description</h3>
+<p>
+This program creates a windowed program using Java Swing components that displays a colored rectangle.  The color can be changed by both moving the RGB sliders or editing their text fields.
+</p>
+<hr>
+
+<h3>User Documentation</h3>
+<p>
+The user can manipulate the color being displayed by the rectangle by either moving one of the RGB sliders, which also updates the corresponding text fields, or editing one of the text fields, which also updates the corresponding RGB slider.
+</p>
+
+<hr>
+
+<h3>Developer Documentation</h3>
+<img src="./25-13_ColorChooser_Hard_files/25-13_ColorChooser_Hard.png">
+<p>
+The ColorChooser class extends JFrame, and creates a GUI to choose a color for the displayed rectangle from the ColorPanel class by using JSliders and JTextFields to enter data.
+</p>
+<p>
+The ColorPanel class extends the JPanel class, and overrides the paintComponent method to draw a rectangle based on the size of the panel and the values of its Color variable.  It also provides public setRed, setGreen, and setBlue methods to update the corresponding RGB value and call the repaint method.
+</p>
+<p>
+ChangeEvents and ActionEvents are generated from the sliders and text fields and used to call the ColorPanels methods and update the GUI.
+</p>
+<a href="https://class-svn.engineering.uiowa.edu/swd/projects/FALL14/konefes/extra_credit/25-13_ColorChooser_Hard/doc/index.html"> Click here for SVN JavaDocs</a><br>
+<hr>
+
+
+<h3>Source Code</h3>
+<a href="https://class-svn.engineering.uiowa.edu/swd/projects/FALL14/konefes/extra_credit/25-13_ColorChooser_Hard/src/ColorChooserTest.java"> ColorChooserTest.java</a><br>
+<a href="https://class-svn.engineering.uiowa.edu/swd/projects/FALL14/konefes/extra_credit/25-13_ColorChooser_Hard/src/ColorChooser.java"> ColorChooser.java</a><br>
+<a href="https://class-svn.engineering.uiowa.edu/swd/projects/FALL14/konefes/extra_credit/25-13_ColorChooser_Hard/src/ColorPanel.java"> ColorPanel.java</a><br>
+
+<hr>
+<a href="http://user.engineering.uiowa.edu/~konefes/swd/index.html"> Back home</a>
+
+</body></html>

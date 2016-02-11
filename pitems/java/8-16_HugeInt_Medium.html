@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<!-- saved from url=(0074)http://user.engineering.uiowa.edu/~konefes/swd/ec/8-16_HugeInt_Medium.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>Chuck Konefes --- 8-16_HugeInt_Medium</title>
+</head>
+
+<body>
+<center>
+
+<h2>8-16_HugeInt_Medium</h2>
+<hr>
+</center>
+
+<h3>Problem Description</h3>
+<p>
+This program creates HugeInteger objects that contain an array representing up to 40 digits of an integer.  Compare and arithmetic functions are also provided.
+</p>
+<hr>
+
+<h3>User Documentation</h3>
+<p>
+Upon starting, two random HugeIntegers h1 and h2 are created.  Operations are performed to compare to zero and each other.  After that, the two HugeIntegers are added and subtracted from each other.  All results are printed to the display.
+</p>
+
+<hr>
+
+<h3>Developer Documentation</h3>
+<img src="./8-16_HugeInt_Medium_files/8-16_HugeInt_Medium.png">
+<p>
+The HugeInteger class contains an integer array of size 40.  It can be filled by the parse method that takes a string and converts it to the digits in the array.  Array entries can also be set individually.
+</p>
+<p>
+
+</p>
+<p>
+The HugeIntegerTest class uses Math.random to create two HugeInteger objects with a random number of digits between 1 and 40.  It also fills each digit with a random number between 1 and 10.  It then tests the isZero, isEqualTo, isLessThan, isGreaterThan, add, and subtract methods and prints the results.
+</p>
+<hr>
+
+
+<h3>Source Code</h3>
+<a href="HugeIntegerTest.java"> HugeIntegerTest.java</a><br>
+<a href="HugeInteger.java"> HugeInteger.java</a><br>
+
+<hr>
+
+</body></html>
