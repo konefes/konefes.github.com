@@ -94,6 +94,9 @@ header, #about{
     background-image: url('../img/pattern-hash.png');
 }
 
+.buttons {
+    padding-bottom: 30px;
+}
 
 /*
 .caption-text h3{
